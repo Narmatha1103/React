@@ -75,6 +75,11 @@ const Header = () => {
               </Link>
             </Dropdown.Menu>
           </Dropdown>
+          <Nav className="me-auto">
+            <Button variant="primary">
+              <Nav.Link href="Reminder">Login</Nav.Link>
+            </Button>
+          </Nav>
         </Nav>
       </Container>
     </Navbar>

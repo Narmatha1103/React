@@ -6,6 +6,8 @@ import {
   Badge,
   Dropdown,
   Button,
+  NavLink,
+  NavbarBrand,
 } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
@@ -19,13 +21,18 @@ const Header = () => {
     productDispatch,
   } = CartState();
   return (
-    <Navbar bg="primary" variant="dark" style={{ height: 80 }}>
+    <Navbar
+      className="navbar"
+      bg="primary"
+      variant="dark"
+      style={{ height: 80 }}
+    >
       <Container>
-        <Navbar.Brand>
+        <NavbarBrand>
           <Link to="/" style={{ color: "white", textDecoration: "none" }}>
             Products Listing
           </Link>
-        </Navbar.Brand>
+        </NavbarBrand>
         <Navbar.Text className="search">
           <FormControl
             style={{ width: 500 }}
@@ -75,12 +82,12 @@ const Header = () => {
               </Link>
             </Dropdown.Menu>
           </Dropdown>
-          <Nav className="me-auto">
-            <Button variant="primary">
-              <Nav.Link href="Reminder">Login</Nav.Link>
-            </Button>
-          </Nav>
         </Nav>
+        <NavbarBrand>
+          <Link to="/signup" style={{ color: "white", textDecoration: "none" }}>
+            Sign Up
+          </Link>
+        </NavbarBrand>
       </Container>
     </Navbar>
   );
